@@ -45,16 +45,24 @@ const postalCodes = {
 }
 
 exports.validate = function validate(province, postal) {
+
+  // A1A 1A1
+  if (!postal.match(/^(\s)*[a-zA-Z][0-9][a-zA-Z](\s)*[0-9][a-zA-Z][0-9](\s)*$/)) {
+    return false
+  }
+
   const prefix = postalCodes[province.toLowerCase()];
+  const postalModified = postal.trim().toLowerCase();
+
   if (prefix) {
     if (typeof(prefix) == 'string') {
-      return postal.toLowerCase().startsWith(prefix.toLowerCase())
+      return postalModified.startsWith(prefix.toLowerCase())
     }
 
     if (typeof(prefix) == 'object') {
       let match = false
       prefix.forEach((p) => {
-        if (postal.toLowerCase().startsWith(p.toLowerCase())) {
+        if (postalModified.startsWith(p.toLowerCase())) {
           match = true
         }
       })
