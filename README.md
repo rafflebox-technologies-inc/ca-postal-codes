@@ -9,7 +9,8 @@ Canada postal codes
 ```javascript
 const postalCodes = require('ca-postal-codes');
 
-postalCodes.validate('ON', 'S')).toBe(false);
+postalCodes.validate('ON', 'K') // true
+postalCodes.validate('ON', 'G') // false
 ```
 
 ## Build
