@@ -1,0 +1,22 @@
+{
+  "name": "ca-postal-codes",
+  "version": "1.0.0",
+  "description": "Canada postal codes",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafflebox-technologies-inc/ca-postal-codes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafflebox-technologies-inc/ca-postal-codes/issues"
+  },
+  "homepage": "https://github.com/rafflebox-technologies-inc/ca-postal-codes#readme",
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}
