@@ -10,6 +10,7 @@ Canada postal codes
 const postalCodes = require('ca-postal-codes');
 
 postalCodes.validate('ON', 'K') // true
+postalCodes.validate('Ontario', 'k') // true
 postalCodes.validate('ON', 'G') // false
 ```
 
