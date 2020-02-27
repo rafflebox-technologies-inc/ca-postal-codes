@@ -44,7 +44,7 @@ const postalCodes = {
   'prince edward island': pe
 }
 
-module.exports.validate = function validate(province, postal) {
+exports.validate = function validate(province, postal) {
   const prefix = postalCodes[province.toLowerCase()];
   if (prefix) {
     if (typeof(prefix) == 'string') {
