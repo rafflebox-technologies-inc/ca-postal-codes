@@ -1,6 +1,3 @@
-
-'use strict'
-
 const ab = 'T';
 const bc = 'V';
 const mb = 'R';
@@ -15,7 +12,7 @@ const sk = 'S';
 const yt = 'Y';
 const pe = 'C';
 
-const postalCodes = {
+const postalCodes: any = {
   'ab': ab,
   'bc': bc,
   'mb': mb,
@@ -44,16 +41,16 @@ const postalCodes = {
   'prince edward island': pe
 }
 
-exports.validate = function validate(province, postal) {
+const validate = (province: string, postal: string): boolean => {
   const prefix = postalCodes[province.toLowerCase()];
   if (prefix) {
-    if (typeof(prefix) == 'string') {
+    if (typeof(prefix) === 'string') {
       return postal.toLowerCase().startsWith(prefix.toLowerCase())
     }
 
-    if (typeof(prefix) == 'object') {
+    if (typeof(prefix) === 'object') {
       let match = false
-      prefix.forEach((p) => {
+      prefix.forEach((p: string) => {
         if (postal.toLowerCase().startsWith(p.toLowerCase())) {
           match = true
         }
@@ -66,3 +63,4 @@ exports.validate = function validate(province, postal) {
   }
   return false
 }
+export default validate;

@@ -1,10 +1,19 @@
 {
-  "name": "ca-postal-codes",
+  "name": "@rafflebox-technologies-inc/postal-codes",
   "version": "0.1.2",
-  "description": "Canada postal codes",
+  "description": "Canada postal codes - US zip codes",
   "main": "postal-codes.js",
+  "Author": "Rafflebox Technologies Inc",
+  "prettier": "@rafflebox-technologies-inc/rafflebox-prettier-config",
+  "engines": {
+    "node": ">=14 <15"
+  },
   "scripts": {
-    "test": "jest test"
+    "test": "jest --verbose --detectOpenHandles --config=jest.config.js",
+    "build": "tsc",
+    "lint": "eslint \"**/*.{ts,js}\"",
+    "format": "prettier --write \"**/*.{ts,js,json,md,yml}\"",
+    "format:check": "prettier --debug-check \"**/*.{ts,js,json,md,yml}\""
   },
   "repository": {
     "type": "git",
@@ -17,6 +26,15 @@
   },
   "homepage": "https://github.com/rafflebox-technologies-inc/ca-postal-codes#readme",
   "devDependencies": {
-    "jest": "^25.1.0"
+    "@rafflebox-technologies-inc/rafflebox-prettier-config": "~1.0.1",
+    "@types/jest": "~27.5.0",
+    "eslint": "~6.8.0",
+    "husky": "~4.3.8",
+    "jest": "~27.5.1",
+    "prettier": "~2.6.2",
+    "ts-jest": "~27.1.4",
+    "ts-node": "~10.7.0",
+    "typescript": "~4.6.3",
+    "lint-staged": "~12.3.8"
   }
 }
